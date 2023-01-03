@@ -42,6 +42,12 @@ require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter-textobjects',
     after = 'nvim-treesitter',
   }
+  use{
+    'nvim-tree/nvim-tree.lua',
+    requires={
+      'nvim-tree/nvim-web-devicons'
+    }
+  }
 
   -- Git related plugins
   use 'tpope/vim-fugitive'
@@ -196,6 +202,11 @@ require('telescope').setup {
     },
   },
 }
+
+require("nvim-tree").setup()
+vim.keymap.set('n', '<leader>t', ':NvimTreeOpen<CR>')
+vim.keymap.set('n', '<leader>tt', ':NvimTreeToggle<CR>')
+
 
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
