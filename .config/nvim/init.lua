@@ -7,10 +7,20 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
   vim.cmd [[packadd packer.nvim]]
 end
 
+local set = vim.opt
+set.tabstop =4
+set.softtabstop=4
+set.shiftwidth=4
+
+local lspconfig = require"lspconfig"
+lspconfig.omnisharp.setup {}
+
+
 require('packer').startup(function(use)
   -- Package manager
   use 'wbthomason/packer.nvim'
 
+  use 'OmniSharp/omnisharp-vim'
   use { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     requires = {
@@ -37,7 +47,6 @@ require('packer').startup(function(use)
       pcall(require('nvim-treesitter.install').update { with_sync = true })
     end,
   }
-
   use { -- Additional text objects via treesitter
     'nvim-treesitter/nvim-treesitter-textobjects',
     after = 'nvim-treesitter',
@@ -65,6 +74,12 @@ require('packer').startup(function(use)
 
   -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
+
+  use ({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
+
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
@@ -123,6 +138,10 @@ vim.o.smartcase = true
 -- Decrease update time
 vim.o.updatetime = 250
 vim.wo.signcolumn = 'yes'
+
+
+
+vim.opt.relativenumber = true
 
 -- Set colorscheme
 vim.o.termguicolors = true
@@ -206,7 +225,6 @@ require('telescope').setup {
 require("nvim-tree").setup()
 vim.keymap.set('n', '<leader>t', ':NvimTreeOpen<CR>')
 vim.keymap.set('n', '<leader>tt', ':NvimTreeToggle<CR>')
-
 
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
@@ -348,9 +366,9 @@ end
 --  Add any additional override configuration in the following tables. They will be passed to
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
-  -- clangd = {},
-  -- gopls = {},
-  -- pyright = {},
+   clangd = {},
+   gopls = {},
+   pyright = {},
   -- rust_analyzer = {},
   -- tsserver = {},
 
