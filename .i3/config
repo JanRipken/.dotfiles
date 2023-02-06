@@ -289,7 +289,7 @@ exec_always --no-startup-id fix_xcursor
 
 
 exec --no-startup-id numlockx on
-exec setxkmap -option keypad:pointerkeys
+exec setxkbmap -option keypad:pointerkeys
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
