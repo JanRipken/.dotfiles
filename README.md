@@ -11,6 +11,15 @@ then
 fi
 dotfiles config --local status.showUntrackedFiles no
 
+//überarbeiten
 dotfiles submodule update --init
 ```
   
+# Zsh and oh-my-zsh
+
+# alacritty
+
+# neovim
+
+# tools
+
