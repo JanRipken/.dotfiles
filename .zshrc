@@ -118,3 +118,4 @@ export PATH=~/kafka/kafka-3.5.0-src/bin:$PATH
 alias cppdoc="brave \[1\]\ code/cpp/documentation/html_book_20190607/reference/en/Main_Page.html"
 
 alias dotfiles="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+
