@@ -36,7 +36,7 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # Monitore
 
 exec xrandr --output eDP-1 --auto --left-of DVI-I-2-1
-exec xrandr --output DVI-I-2-1 --auto --right-of eDP-1
+exec xrandr --output DVI-I-2-1 --primary --auto --right-of eDP-1
 exec xrandr --output DVI-I-3-2 --auto --right-of DVI-I-2-1
 
 # Hintergrundfarbe
