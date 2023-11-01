@@ -69,7 +69,7 @@ window:
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 1
+  opacity: 0.5
 
   # Startup Mode (changes require restart)
   #
@@ -183,47 +183,46 @@ font:
   #builtin_box_drawing: true
 colors:
   primary:
-    background: "#fbf1c7"  
-    foreground: "#3c3836"  
-    dim_foreground: "#665c54"  
+    background: "#2e3440"  # Frost Blue
+    foreground: "#e5e9f0"  # Snow Storm
+    dim_foreground: "#4c566a"  # Frost Storm
   selection:
-    text: "#faede2"  
-    background: "#7c6f64"  
+    text: "#e5e9f0"  # Snow Storm
+    background: "#434c5e"  # Frost Blue (Slightly darker)
   search:
     matches:
-      foreground: "#faede2"  
-      background: "#cc241d" 
+      foreground: "#e5e9f0"  # Snow Storm
+      background: "#bf616a"  # Aurora Red
     colors.footer_bar:
-      background: "#faede2" 
-      foreground: "#3c3836"
+      background: "#2e3440"  # Frost Blue
+      foreground: "#e5e9f0"  # Snow Storm
   normal:
-    black: "#928374"   
-    red: "#9d0006"  
-    green: "#79740e"  
-    yellow: "#b57614"  
-    blue: "#076678"  
-    magenta: "#8f3f71"  
-    cyan: "#427b58"  
-    white: "#3c3836"  
+    black: "#4c566a"  # Frost Storm
+    red: "#bf616a"  # Aurora Red
+    green: "#a3be8c"  # Chill Green
+    yellow: "#ebcb8b"  # Glacier Yellow
+    blue: "#5e81ac"  # Frost Blue (Slightly lighter)
+    magenta: "#b48ead"  # Aurora Purple
+    cyan: "#8fbcbb"  # Iceberg Blue
+    white: "#d8dee9"  # Polar White
   bright:
-    black: "#665c54"  
-    red: "#cc241d"  
-    green: "#98971a"  
-    yellow: "#d79921"  
-    blue: "#458588"  
-    magenta: "#b16286" 
-    cyan: "#689d6a"  
-    white: "#ebdbb2"  
+    black: "#4c566a"  # Frost Storm
+    red: "#bf616a"  # Aurora Red
+    green: "#a3be8c"  # Chill Green
+    yellow: "#ebcb8b"  # Glacier Yellow
+    blue: "#5e81ac"  # Frost Blue (Slightly lighter)
+    magenta: "#b48ead"  # Aurora Purple
+    cyan: "#8fbcbb"  # Iceberg Blue
+    white: "#d8dee9"  # Polar White
   dim:
-    black: "#3c3836" 
-    red: "#9d0006"  
-    green: "#79740e" 
-    yellow: "#b57614"  
-    blue: "#076678"  
-    magenta: "#8f3f71"  
-    cyan: "#427b58"  
-    white: "#665c54" 
-
+    black: "#4c566a"  # Frost Storm
+    red: "#bf616a"  # Aurora Red
+    green: "#a3be8c"  # Chill Green
+    yellow: "#ebcb8b"  # Glacier Yellow
+    blue: "#5e81ac"  # Frost Blue (Slightly lighter)
+    magenta: "#b48ead"  # Aurora Purple
+    cyan: "#8fbcbb"  # Iceberg Blue
+    white: "#d8dee9"  # Polar White
 
 
 # If `true`, bold text is drawn using the bright color variants.

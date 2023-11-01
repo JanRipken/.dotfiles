@@ -40,7 +40,7 @@ exec xrandr --output DVI-I-2-1 --primary --auto --right-of eDP-1
 exec xrandr --output DVI-I-3-2 --auto --right-of DVI-I-2-1
 
 # Hintergrundfarbe
-exec --no-startup-id xsetroot -solid "#ebdbb2"
+exec --no-startup-id xsetroot -solid "#a3be8c"
 
 # Start Applications
 bindsym $mod+F2 exec brave
@@ -266,11 +266,4 @@ bar {
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
 
-# Gruvbox Theme Colors
-# class                   border  backgr. text    indic.   child_border
-client.focused          #83A598 #3B4252 #EBDBB2 #83A598
-client.focused_inactive #83A598 #3B4252 #928374 #83A598
-client.unfocused        #83A598 #3B4252 #928374 #83A598
-client.placeholder      #000000 #000000 #000000 #000000
 
-client.background       #1D2021
