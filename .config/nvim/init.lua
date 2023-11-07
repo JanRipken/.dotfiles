@@ -50,6 +50,15 @@ require('lazy').setup({
       -- Additional lua configuration, makes nvim stuff amazing!
       'folke/neodev.nvim',
     },
+    config = function()
+      local nvim_lsp = require('lspconfig')
+
+      nvim_lsp.clangd.setup {
+        cmd = { "clangd", "--compile-commands-dir=BUILD_DIRECTORY" },
+        filetypes = { "c", "cpp", "objc", "objcpp" },
+        root_dir = nvim_lsp.util.root_pattern(".git", "compile_commands.json"),
+      }
+    end
   },
 
   {
