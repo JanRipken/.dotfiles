@@ -16,4 +16,12 @@ return {
   keys = {
     { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
   },
+  -- Add Gitsigns below
+  {
+    "lewis6991/gitsigns.nvim",
+    requires = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require "custom.git"
+    end,
+  },
 }
