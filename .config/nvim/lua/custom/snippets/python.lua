@@ -8,5 +8,5 @@ local i = ls.insert_node
 local fmt = require("luasnip.extras.fmt").fmt
 
 ls.add_snippets("python", {
-  s("hw", fmt('print("Hello, World!")', {})),
+  s("hw", fmt('print("Hello, {} ")', { i(1) })),
 })
